@@ -2,6 +2,7 @@
 Imports System.Drawing
 Imports Microsoft.Office.Interop
 Imports System.Collections.ObjectModel
+Imports System.ComponentModel
 
 Class MainWindow
 
@@ -295,9 +296,7 @@ Class MainWindow
 
     End Sub
 
-    Private Function GenTestSample() As ArrayList
-        Throw New NotImplementedException()
-    End Function
+
 
     '
     ' 執行 刪除資料夾 刪除已標記 "Delete Mail"   
@@ -963,8 +962,19 @@ Class MainWindow
         gArls.Sort(myComparer)
 
 
+        AddHandler bgw.DoWork, AddressOf Run_Update_Mailbox
+        AddHandler bgw.ProgressChanged, AddressOf bgw_ProgressChanged
+        AddHandler bgw.RunWorkerCompleted, AddressOf bgw_RunWorkerCompleted
+        bgw.WorkerReportsProgress = True
+
+
+
+        bgw.RunWorkerAsync()
+
+
+
         Try
-            '   Init_Mail_Event()
+            '     Init_Mail_Event()
         Catch ex As Exception
 
         End Try
@@ -978,6 +988,34 @@ Class MainWindow
 
 
 
+
+    End Sub
+
+    Private Sub bgw_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs)
+        Throw New NotImplementedException()
+    End Sub
+
+    Private Sub bgw_ProgressChanged(sender As Object, e As ProgressChangedEventArgs)
+
+        Dim mData As ArrayList = e.UserState
+
+    End Sub
+
+    Dim bgw As New BackgroundWorker
+    '
+    ' 
+    '
+    Private Sub Run_Update_Mailbox(sender As Object, e As DoWorkEventArgs)
+
+
+        Do
+            UpdateProgInbox(MailEventFlag.INI_MAIL)
+
+            bgw.ReportProgress(1, numbers.ToList < Int() > ());
+            Threading.Thread.Sleep(5000)
+
+
+        Loop
 
     End Sub
 
