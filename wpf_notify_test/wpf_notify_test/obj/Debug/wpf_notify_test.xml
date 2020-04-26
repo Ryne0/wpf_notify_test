@@ -1,0 +1,83 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+wpf_notify_test
+</name>
+</assembly>
+<members>
+<member name="T:wpf_notify_test.My.MyWpfExtension">
+ <summary>
+ 用來定義 WPF 的 My 命名空間中可用屬性的模組
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:wpf_notify_test.My.MyWpfExtension.Application">
+ <summary>
+ 傳回執行中應用程式的應用程式物件
+ </summary>
+</member>
+<member name="P:wpf_notify_test.My.MyWpfExtension.Computer">
+ <summary>
+ 傳回主機電腦的相關資訊。
+ </summary>
+</member>
+<member name="P:wpf_notify_test.My.MyWpfExtension.User">
+ <summary>
+ 傳回目前使用者的資訊。如果您希望用目前的 Windows 使用者認證執行此應用程式，
+ 請呼叫 My.User.InitializeWithWindowsUser()。
+ </summary>
+</member>
+<member name="P:wpf_notify_test.My.MyWpfExtension.Log">
+ <summary>
+ 傳回應用程式記錄檔。接聽程式可以使用應用程式的組態檔來設定。
+ </summary>
+</member>
+<member name="P:wpf_notify_test.My.MyWpfExtension.Windows">
+ <summary>
+ 傳回此專案中定義的 Windows 集合。
+ </summary>
+</member>
+<member name="T:wpf_notify_test.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:wpf_notify_test.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:wpf_notify_test.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:wpf_notify_test.Application">
+<summary>
+Application
+</summary>
+</member>
+<member name="M:wpf_notify_test.Application.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+<member name="M:wpf_notify_test.Application.Main">
+<summary>
+Application Entry Point.
+</summary>
+</member>
+<member name="T:wpf_notify_test.MainWindow">
+<summary>
+MainWindow
+</summary>
+</member>
+<member name="M:wpf_notify_test.MainWindow.InitializeComponent">
+<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

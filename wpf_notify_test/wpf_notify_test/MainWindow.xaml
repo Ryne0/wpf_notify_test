@@ -1,0 +1,47 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_notify_test"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="300"
+        ShowInTaskbar="False"
+        >
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="6*" />
+
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="8*" />
+
+        </Grid.ColumnDefinitions>
+        
+
+        <Label Grid.Row="0" Grid.Column="0" Content="信件地址:" />
+        <Label Grid.Row="1" Grid.Column="0" Content="內容:"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Margin="3" />
+        <TextBox Grid.Column="1" Grid.Row="1"     Margin="3" />
+
+       
+
+    </Grid>-->
+
+    <StackPanel Orientation="Vertical" Loaded="StackPanel_Loaded">
+
+        <Button Name="button1" Margin="5" Padding="5"
+              Background="AliceBlue" Content="Button"/>
+
+        <Button Name="button2" Margin="5" Padding="25"  Background="Beige" Content="Button2"/>
+
+    </StackPanel>
+
+
+</Window>
